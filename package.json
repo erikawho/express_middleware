@@ -1,0 +1,20 @@
+{
+  "name": "Erika_express_middleware",
+  "version": "1.0.0",
+  "description": "Erika's Express Middleware project",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erikawho/express_middleware.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erikawho/express_middleware/issues"
+  },
+  "homepage": "https://github.com/erikawho/express_middleware#readme"
+}
