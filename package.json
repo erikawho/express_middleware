@@ -29,5 +29,8 @@
     "gulp-eslint": "^1.1.1",
     "gulp-mocha": "^2.2.0",
     "mocha": "^2.3.4"
+  },
+  "dependencies": {
+    "gulp-nodemon": "^2.0.6"
   }
 }
