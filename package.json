@@ -1,8 +1,8 @@
 {
-  "name": "Erika_express_middleware",
+  "name": "erika_express_middleware",
   "version": "1.0.0",
   "description": "Erika's Express Middleware project",
-  "main": "gulpfile.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,10 +11,23 @@
     "url": "git+https://github.com/erikawho/express_middleware.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Erika Hokanson",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/erikawho/express_middleware/issues"
   },
-  "homepage": "https://github.com/erikawho/express_middleware#readme"
+  "homepage": "https://github.com/erikawho/express_middleware#readme",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "chai-http": "^1.0.0",
+    "eslint": "^1.10.3",
+    "express": "^4.13.4",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^1.1.1",
+    "gulp-mocha": "^2.2.0",
+    "mocha": "^2.3.4"
+  }
 }
