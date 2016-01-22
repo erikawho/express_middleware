@@ -3,24 +3,31 @@
 const gulp = require('gulp');
 const eslint = require('gulp-eslint');
 const mocha = require('gulp-mocha');
+const nodemon = require('gulp-nodemon');
 
-var files = ['index.js', 'gulpfile.js', './lib/*.js', './test/*.spec.js',
- '!node_modules/**', '!*.json'];
+const scripts = ['index.js', 'gulpfile.js', './lib/*.js', './test/*.js'];
 
 gulp.task('lint', () => {
-  return gulp.src(files)
+  return gulp.src(scripts)
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
 });
 
-gulp.task('mocha', () => {
+gulp.task('test', () => {
   return gulp.src('test/*.spec.js')
     .pipe(mocha({ reporter: 'nyan' }));
 });
 
 gulp.task('watch', () => {
-  return gulp.watch(files, ['lint', 'mocha']);
+  return gulp.watch(scripts, ['lint', 'test']);
 });
 
-gulp.task('default', ['watch', 'lint', 'mocha']);
+gulp.task('start', () => {
+  nodemon({
+    script: 'index.js',
+    ext: 'html js'
+  });
+});
+
+gulp.task('default', ['watch', 'lint', 'test', 'start']);
